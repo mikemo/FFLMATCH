@@ -15,9 +15,11 @@
         
         var volArr = $.makeArray(tableData);
         var volunteers = volArr.map(function(value,index) { return value[0]; }); 
-       console.log(volunteers);
-        console.log(volunteers[1]);
+      // console.log(volunteers);
+      //  console.log(volunteers[1]);
        var selectbox = $('<select></select>');
+        selectbox.append($('<option value=default>'+'select your name'+'</option>')); 
+        }
         
         for(i=1;i<volunteers.length;i++){
         selectbox.append($('<option value='+volunteers[i]+'>'+volunteers[i]+'</option>')); 

@@ -14,7 +14,7 @@
         var picklist = $('<select></select>');
         $(picklistData).each(function (i, rowData) {
            $(rowData).each(function (j, cellData)
-               picklist.append($('<option value='+ cellData[j,0] + '</option>'));
+               picklist.append($('<option value='+ cellData.size + '</option>'));
             });
             
                           

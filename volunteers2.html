@@ -11,7 +11,7 @@
     function arrayToTable(tableData) {
 
         var table = $('<table></table>');
-        table.append($('Select your name:<BR> <tr></tr><td>"+ tableData +</td>'));
+        table.append($('Select your name:<BR> <tr></tr><td>'+ tableData +'</td>'));
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {

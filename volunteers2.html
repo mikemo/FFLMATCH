@@ -12,10 +12,7 @@
     function arrayToTable(tableData) {
 
         var table = $('<table></table>');
-var picklist = $('<tr></tr>');
         $(tableData).each(function (i, rowData) {
-            picklist.append($('plist is' + tableData[i,0] + 'yy'));
-            $('body').append('picklist is' +picklist+'natch');
             var row = $('<tr></tr>');
             $('body').append('row is'+row+'end');
             $(rowData).each(function (j, cellData) {

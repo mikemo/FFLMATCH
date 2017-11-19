@@ -15,7 +15,7 @@
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {
-                row.append($('<td>'+cellData+j+'</td>'));
+                row.append($('<td>'+cellData+"i is " + i + " and j is " + j+'</td>'));
             });
             table.append(row);
         });  

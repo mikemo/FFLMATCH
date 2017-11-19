@@ -21,7 +21,7 @@
 
     $.ajax({
         type: "GET",
-        url: "EV.csv",
+        url: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTUFW2Re65Vv-2cRWEO4Uy6h2gA7RV89eP_Fx2tSAwaY1X2wpcYzooZ8Su9uGRrswEL-AfNT2hyuM05/pub?gid=0&single=true&output=csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }

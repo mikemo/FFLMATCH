@@ -13,8 +13,13 @@
 
         var table = $('<table></table>');
         var namelistArr = $.makeArray(tableData);
-        console.log(namelistArr);
+     //   console.log(namelistArr);
 
+       
+        var namemap = namelistArr.map(function(value,index) { return value[0]; });
+        console.log(namemap);
+        
+        
         var namelist = [];  
         for( var i = 1; i < namelistArr.length; i++ )
             {

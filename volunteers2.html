@@ -47,12 +47,7 @@
 
         
         
-         $("#selectme").change(function() {
-            console.log("change noticed");
-            $("#volTable").css({ display: "block"});
-    });
-        
-        
+
         
            $.ajax({
         type: "GET",
@@ -60,6 +55,12 @@
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
+            $("#selectme").change(function() {
+            console.log("change noticed");
+            $("#volTable").css({ display: "block"});
+ 
+        
+    });    
     });
      
         
@@ -69,12 +70,9 @@
     
        </script>
     
-
-
+ Click here to see your essays to grade:<BR>
+ <input type="submit" name="showessay">
     
 Please select your name:<BR>
     
-    Click here to see your essays to grade:<BR>
-           <input type="submit" name="showessay">
-
 </body>

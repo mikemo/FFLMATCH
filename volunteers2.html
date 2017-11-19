@@ -10,10 +10,14 @@
     <script>
 
     function arrayToTable(tableData) {
-       var picklist = 'frank';
+
         var table = $('<table></table>');
+var picklist ='';
         $(tableData).each(function (i, rowData) {
+            picklist.append(tableData[i,0]);
+            $('body').append('picklist is' +picklist+'natch');
             var row = $('<tr></tr>');
+            $('body').append('row is'+row+'end');
             $(rowData).each(function (j, cellData) {
                 row.append($('<td>'+cellData+"i is " + i + " and j is " + j+'</td>'));
             });

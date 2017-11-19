@@ -23,7 +23,7 @@
         type: "GET",
         url: "EV.csv",
         success: function (data) {
-            $('body').append(arrayToTable(Papa.parse(data).data));
+            $('body').append(arrayToTable(Papa.parse(data,{header: true}).data));
         }
     });
 </script>

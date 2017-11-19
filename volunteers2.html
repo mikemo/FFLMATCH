@@ -8,26 +8,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 
     <script>
-        
-    function arrayToPickList(picklistData) {
-
-        var picklist = $('<select></select>');
-        $(picklistData).each(function (i, rowData) {
-           $(rowData).each(function (j, cellData)           
-               picklist.append($('<td>'+cellData+'</td>'));
-            });
-            
-                          
-                        
-        });             
-      return picklist;
-    }
-
 
     function arrayToTable(tableData) {
-
         var table = $('<table></table>');
-        table.append($('Select your name:<BR> <tr></tr><td></td>'));
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {

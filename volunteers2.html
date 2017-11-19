@@ -9,23 +9,16 @@
 
     <script>
 
-    function arrayToTable(tableData) {
-       
-  
-        
-            
-            
-            
+    function arrayToTable(tableData) {   
         var table = $('<table></table>');
         
-        var volArr = $.makeArray(tableData);
-        var volunteers = volArr.map(function(value,index) { return value[0]; });
         
-        $('<option>').val('volunteers[1]').text('volunteers[1]').appendTo('#selectlist');
+        var volArr = $.makeArray(tableData);
+        var volunteers = volArr.map(function(value,index) { return value[0]; }); 
+        $('<option>').val('TEST').text('TEST').appendTo('#selectlist');
             
        
    
-     
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {
@@ -49,11 +42,9 @@
 
 
 <br>
-    
+    Please select your name
 <select name="selectlist" style="width:100%;">
-<option value="0" selected>(Please select your name)</option>
-         
-         
+<option value="0" selected>Volunteer Name</option>     
 </select>
     
     

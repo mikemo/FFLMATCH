@@ -15,8 +15,7 @@
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {
-                row.append($('<td>'+cellData+'</td>'));
-                table.append($('name are:'+picklist+'<br>'));
+                row.append($('<td>'+cellData+j+'</td>'));
             });
             table.append(row);
         });  

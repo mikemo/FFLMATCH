@@ -10,6 +10,21 @@
     
     <script>
     
+               var volArr = $.makeArray(tableData);
+        var volunteers = volArr.map(function(value,index) { return value[0]; }); 
+       var selectbox = $('<select id="selectme"></select>');
+        selectbox.append($('<option value=default>'+'Name'+'</option>')); 
+   
+        
+        for(i=1;i<volunteers.length;i++){
+        selectbox.append($('<option value='+volunteers[i]+'>'+volunteers[i]+'</option>')); 
+        }
+        $('body').append(selectbox);
+       
+        
+        
+        
+        
     $("#selectme").change(function() {
         
   if ($(this).data('options') === undefined) {
@@ -21,26 +36,17 @@
   $('#select2').html(options);
 });
     
+        
     </script>
     
     
     <script>
 
     function arrayToTable(tableData) {   
-        var table = $('<table id="volTable" visible="false"></table>');
+        var table = $('<table id="volTable" display="none"></table>');
         
         
-        var volArr = $.makeArray(tableData);
-        var volunteers = volArr.map(function(value,index) { return value[0]; }); 
-       var selectbox = $('<select id="selectme"></select>');
-        selectbox.append($('<option value=default>'+'Name'+'</option>')); 
-   
-        
-        for(i=1;i<volunteers.length;i++){
-        selectbox.append($('<option value='+volunteers[i]+'>'+volunteers[i]+'</option>')); 
-        }
-        $('body').append(selectbox);
-       
+ 
    
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');

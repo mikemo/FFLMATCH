@@ -52,14 +52,21 @@
                          
       return table;
     }
+
         
-    $.ajax({
+    $('select[name=dropdown]').change(function() {
+           $.ajax({
         type: "GET",
         url: "EV.csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
     });
+        
+    });
+
+        
+ 
 </script>
     
 Please select your name:<BR>

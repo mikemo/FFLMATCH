@@ -12,10 +12,18 @@
     function arrayToTable(tableData) {
 
         var table = $('<table></table>');
-        var namelist = $.makeArray(tableData);
-    
-           console.log(namelist[0,0]);
-        console.log(namelist);
+        var namelistArr = $.makeArray(tableData);
+        console.log(namelistArr);
+
+        var namelist = [];  
+        for( var i = 1; i < namelistArr.length; i++ )
+            {
+             namelist.push(namelistArr[i,0])
+            }
+       console.log(namelist);
+        
+        
+        namelistArr[1,0] 
      
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');

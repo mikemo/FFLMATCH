@@ -12,7 +12,11 @@
     function arrayToTable(tableData) {
 
         var table = $('<table></table>');
-        console.log(tableData.length);
+        var namelist = $.makeArray(tableData);
+        console.log(tableData.get[0]);
+           console.log(namelist[0,0]);
+        console.log(namelist);
+     
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {

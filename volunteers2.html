@@ -8,10 +8,23 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 
     <script>
+        
+    function arrayToPickList(picklistData) {
+
+        var picklist = $('<select></select>');
+        $(picklistData).each(function (i, rowData) {
+            var person = $('');
+            person.append($(rowData,1));
+            picklist.append($('<option value=person'+ person + '</option>'));
+        });             
+      return picklist;
+    }
+
+
     function arrayToTable(tableData) {
 
         var table = $('<table></table>');
-        table.append($('Select your name:<BR> <tr></tr><td>'+ tableData +'</td>'));
+        table.append($('Select your name:<BR> <tr></tr><td></td>'));
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {
@@ -23,6 +36,14 @@
       return table;
     }
 
+            $.ajax({
+        type: "GET",
+        url: "EV.csv",
+        success: function (data) {
+            $('body').append(arrayToPickList(Papa.parse(data).data));
+        }
+    });
+        
     $.ajax({
         type: "GET",
         url: "EV.csv",

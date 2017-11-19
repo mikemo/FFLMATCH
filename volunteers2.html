@@ -13,7 +13,13 @@
 
         var picklist = $('<select></select>');
         $(picklistData).each(function (i, rowData) {
-            picklist.append($('<option value=picklistData[1,i]'+ picklistData[1,i] + '</option>'));
+           $(rowData).each(function (j, cellData) {
+                row.append($('cellData'));
+               picklist.append($('<option value=cellData'+ cellData + '</option>'));
+            });
+            
+                          
+                        
         });             
       return picklist;
     }

@@ -7,10 +7,27 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
 
+    
+    <script>
+    
+    $("#selectme").change(function() {
+        
+  if ($(this).data('options') === undefined) {
+    /*Taking an array of all options-2 and kind of embedding it on the select1*/
+    $(this).data('options', $('#select2 option').clone());
+  }
+  var id = $(this).val();
+  var options = $(this).data('options').filter('[value=' + id + ']');
+  $('#select2').html(options);
+});
+    
+    </script>
+    
+    
     <script>
 
     function arrayToTable(tableData) {   
-        var table = $('<table></table>');
+        var table = $('<table id="volTable" visible="false"></table>');
         
         
         var volArr = $.makeArray(tableData);

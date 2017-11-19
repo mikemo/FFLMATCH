@@ -15,9 +15,10 @@
         
         var volArr = $.makeArray(tableData);
         var volunteers = volArr.map(function(value,index) { return value[0]; }); 
-        $('<option>').val('TEST').text('TEST').appendTo('#selectlist');
-            
        
+        // $('<option>').val('TEST').text('TEST').appendTo('#selectlist');
+            
+       $('#selectlist').append($('<option></option>').val('TEST).text('TEST'))
    
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');

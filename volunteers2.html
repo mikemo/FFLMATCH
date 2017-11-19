@@ -10,27 +10,21 @@
     <script>
 
     function arrayToTable(tableData) {
-
+       
+  
+        
+            
+            
+            
         var table = $('<table></table>');
-        var namelistArr = $.makeArray(tableData);
-     //   console.log(namelistArr);
-
+        
+        var volArr = $.makeArray(tableData);
+        var volunteers = volArr.map(function(value,index) { return value[0]; });
+        
+     $('<option>').val(volunteers[1]).text(volunteers[1]).appendTo('#selectlist');
+            
        
-        var namemap = namelistArr.map(function(value,index) { return value[0]; });
-        console.log(namemap);
-        
-        
-        var namelist = [];  
-        for( var i = 1; i < namelistArr.length; i++ )
-            {
-           //  namelist.push(namelistArr[i,0])
-            //    console.log(namelistArr[i,0]);
-       
-            }
-       //console.log(namelist);
-        
-        
-        namelistArr[1,0] 
+   
      
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
@@ -55,5 +49,12 @@
 
 
 <br>
+    
+<select name="selectlist" style="width:100%;">
+<option value="0" selected>(Please select your name)</option>
+         
+         
+</select>
+    
     
 </body>

@@ -46,6 +46,14 @@
     }
 
         
+        
+         $("#selectme").change(function() {
+            console.log("change noticed");
+            $("#volTable").css({ display: "block"});
+    });
+        
+        
+        
            $.ajax({
         type: "GET",
         url: "EV.csv",
@@ -55,10 +63,7 @@
     });
      
         
-    $("#selectme").change(function() {
-            $("#volTable").css({ display: "block" });
-        console.log("change noticed");
-    });
+   
         
   
     

@@ -18,11 +18,16 @@ Please select your name:<BR>
         
        var volArr = $.makeArray(tableData);
        var volunteers = volArr.map(function(value,index) { return value[0]; }); 
-       $('selectme').append($('<option value=default>'+'Name'+'</option>')); 
+       $('#selectme').append($('<option value=default>'+'Name'+'</option>')); 
    
-        
+      
         for(i=1;i<volunteers.length;i++){
-           $('selectme').append($('<option value='+volunteers[i]+'>'+volunteers[i]+'</option>')); 
+           //$('selectme').append($('<option value='+volunteers[i]+'>'+volunteers[i]+'</option>')); 
+              $('#selectme').append($('<option>', {
+            value: volunteers[i],
+            text: volunteers[i]
+            }));
+        
         }
      
        

@@ -6,17 +6,11 @@
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.js"></script>
-
-
- 
-
-    
     
     <script>
 
     function arrayToTable(tableData) {   
         var table = $('<table id="volTable" style="display:none"></table>');
-        
         
         
        var volArr = $.makeArray(tableData);
@@ -30,10 +24,7 @@
         }
         $('body').append(selectbox);
        
-        
-        
- 
-   
+     
         $(tableData).each(function (i, rowData) {
             var row = $('<tr></tr>');
             $(rowData).each(function (j, cellData) {
@@ -46,27 +37,22 @@
     }
 
         
-        
-
-        
+       
            $.ajax({
         type: "GET",
         url: "EV.csv",
         success: function (data) {
             $('body').append(arrayToTable(Papa.parse(data).data));
         }
-            $("#selectme").change(function() {
-            console.log("change noticed");
-            $("#volTable").css({ display: "block"});
- 
+
         
-    });    
     });
      
-        
-   
-        
-  
+               
+            $("#selectme").change(function() {
+            console.log("change noticed");
+            $("#volTable").css({ display: "block"});    
+    }); 
     
        </script>
     

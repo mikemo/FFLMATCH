@@ -15,8 +15,7 @@
         
        var volArr = $.makeArray(tableData);
        var volunteers = volArr.map(function(value,index) { return value[0]; }); 
-       var selectbox = $('<select id="selectme"></select>');
-        selectbox.append($('<option value=default>'+'Name'+'</option>')); 
+       $('selectme').append($('<option value=default>'+'Name'+'</option>')); 
    
         
         for(i=1;i<volunteers.length;i++){
@@ -59,5 +58,6 @@
 
     
 Please select your name:<BR>
+<select id="selectme"></select>
     
 </body>

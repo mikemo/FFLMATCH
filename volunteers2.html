@@ -13,7 +13,7 @@ Please select your name:<BR>
     <script>
 
     function arrayToTable(tableData) {   
-        var table = $('<table id="volTable" style="display:none"></table>');
+        var table = $('<table id="volTable"></table>');
         
         
        var volArr = $.makeArray(tableData);
@@ -45,7 +45,13 @@ Please select your name:<BR>
 
         
        
-           $.ajax({
+
+               
+            $("#selectme").change(function() {
+            console.log("change noticed");
+          //  $("#volTable").css({ display: "block"});  
+                
+                           $.ajax({
         type: "GET",
         url: "EV.csv",
         success: function (data) {
@@ -55,10 +61,8 @@ Please select your name:<BR>
         
     });
      
-               
-            $("#selectme").change(function() {
-            console.log("change noticed");
-            $("#volTable").css({ display: "block"});    
+                
+                
     }); 
     
        </script>

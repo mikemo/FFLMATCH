@@ -44,14 +44,7 @@ Please select your name:<BR>
     }
 
         
-       
-
-               
-            $("#selectme").change(function() {
-            console.log("change noticed");
-          //  $("#volTable").css({ display: "block"});  
-                
-                           $.ajax({
+                                  $.ajax({
         type: "GET",
         url: "EV.csv",
         success: function (data) {
@@ -60,6 +53,13 @@ Please select your name:<BR>
 
         
     });
+
+               
+            $("#selectme").change(function() {
+            console.log("change noticed");
+          //  $("#volTable").css({ display: "block"});  
+                
+
      
                 
                 
